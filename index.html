@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Sets the character encoding to UTF-8 for correct character display -->
     <meta charset="UTF-8">
+
+    <!-- The title of the webpage displayed in the browser tab -->
     <title>Calculator Application</title>
-    <link rel = 'stylesheet' href = 'style.css'>
+
+    <!-- Links an external CSS file for styling the calculator -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id = 'calculator'>
-        <input id = 'display' readonly>
-        <div id = 'keys'>
+    <!-- Main container for the calculator -->
+    <div id="calculator">
+
+        <!-- Display area for showing numbers and results, set to readonly so users can't type directly -->
+        <input id="display" readonly>
+
+        <!-- Container for the calculator buttons -->
+        <div id="keys">
+
+            <!-- Number buttons (7, 8, 9) and AC button (clears the display) -->
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button id = 'AC' onclick="clearDisplay()">AC</button>
+            <button id="AC" onclick="clearDisplay()">AC</button> <!-- Clear button (AC) calls `clearDisplay()` function -->
+
+            <!-- Number buttons (4, 5, 6) and multiplication operator (*) -->
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
-            <button id = 'multiply' onclick="appendToDisplay('*')">*</button>
-            <button id = 'divide'onclick="appendToDisplay('/')">/</button>
+            <button id="multiply" onclick="appendToDisplay('*')">*</button> <!-- Multiplication button adds `*` to the display -->
+            <button id="divide" onclick="appendToDisplay('/')">/</button> <!-- Division button adds `/` to the display -->
+
+            <!-- Number buttons (1, 2, 3) and Addition (+) and subtraction (-) operator -->
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
-            <button id = 'plus' onclick="appendToDisplay('+')">+</button>
-            <button id = 'minus' onclick="appendToDisplay('-')">-</button>
-            <button id = 'zero' onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button id = 'equal' onclick="calculate()">=</button>
+            <button id="plus" onclick="appendToDisplay('+')">+</button> <!-- Addition button adds `+` to the display -->
+            <button id="minus" onclick="appendToDisplay('-')">-</button> <!-- Subtraction button adds `-` to the display -->
+
+            <!-- Zero (0), decimal point (.) and equal (=) buttons -->
+            <button id="zero" onclick="appendToDisplay('0')">0</button> <!-- Zero button adds `0` to the display -->
+            <button onclick="appendToDisplay('.')">.</button> <!-- Decimal point button adds `.` to the display -->
+            <button id="equal" onclick="calculate()">=</button> <!-- Equal button calls `calculate()` to evaluate the expression -->
         </div>
     </div>
-    <script src = 'script.js'></script> 
+
+    <!-- Links to the external JavaScript file (script.js) that contains the logic for the calculator -->
+    <script src="script.js"></script>
 </body>
 </html>
