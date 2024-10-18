@@ -1,6 +1,6 @@
 // Get the HTML element with the ID 'display' and assign it to the variable 'display'.
 // This will be used to show the calculator input and output.
-const display = document.getElementById('display')
+const displayCalculator = document.getElementById('displayCalculator')
 
 
 /**
@@ -9,7 +9,7 @@ const display = document.getElementById('display')
  */
 function appendToDisplay(input){
     // Add the input to the existing value in the display field.
-    display.value += input;
+    displayCalculator.value += input;
 }
 
 /**
@@ -17,7 +17,7 @@ function appendToDisplay(input){
  * This function is typically called when the 'AC' (all clear) button is pressed.
  */
 function clearDisplay(){
-    display.value = "";
+    displayCalculator.value = "";
 }
 
 /**
@@ -28,11 +28,11 @@ function calculate(){
     // Use the 'eval' function to evaluate the mathematical expression in the display.
     // If it's a valid expression, the result is calculated and displayed.
     try{
-        display.value = eval(display.value);
+        displayCalculator.value = eval(displayCalculator.value);
     }
 
     // If it is not valid, display an error message
     catch(error){
-        display.value = 'Huh?'
+        displayCalculator.value = 'Huh?'
     }
 }
