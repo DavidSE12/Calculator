@@ -23,7 +23,7 @@ body{
     overflow: hidden;
 }
 
-#display{
+#displayCalculator{
     height: 70px;
     width: 542.8px;
     background-color: hsl(0, 0%, 25%);
